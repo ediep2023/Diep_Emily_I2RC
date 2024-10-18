@@ -3,21 +3,19 @@ Name: Emily Diep
 
 Section: I2RC
 
-Week: 4
+Week: 6
 
 
 ## Code
 
-The main topic this week was: creating my first preseason digital notebook
+The main topic this week was: creating the code for my PID lab.
 
-Commands: **[COMMANDS]**
+Commands: N/A
 
-Subsystems: **[SUBSYSTEMS]**
+Subsystems: PIDTurnLab (extends from Commands class)
 
 ### How does the code work?
-Write about how it works here
+As of writing this file, I haven't written the initialize, execute, and end methods yet. Despite this, I have set up my drive train object.
 
 ### Important notes for future reference
-Notes about git, and helpful resources, etc. 
-
-Please put them here, they will really help you in the future 
+This code should have at least one method completed and pushed onto github before Friday's session.
