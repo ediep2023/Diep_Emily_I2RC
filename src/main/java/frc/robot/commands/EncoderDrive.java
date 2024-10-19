@@ -7,7 +7,7 @@ public class EncoderDrive extends Command{
     private Drivetrain dt;
     private double setpoint;
 
-    public EncoderDrive(Drivetrain dt, double setpoint){
+    public EncoderDrive(Drivetrain dt, double setpoint);
         this.dt = dt;
         this.setpoint=setpoint;
         addRequirements(dt);
@@ -28,6 +28,7 @@ public class EncoderDrive extends Command{
     }
 
     public boolean isFinished(){
+      
         if (dt.getMeters() >= setpoint) {
             return true;
         }
