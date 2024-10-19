@@ -3,21 +3,26 @@ Name: Emily Diep
 
 Section: I2RC
 
-Week: 4
+Week: 5
 
 
 ## Code
 
-The main topic this week was: creating my first preseason digital notebook
+The main topic this week was: Encoder Drive
 
-Commands: **[COMMANDS]**
+Commands:
+- EncoderDrive, extends from Commander class
+- RobotContainer
 
-Subsystems: **[SUBSYSTEMS]**
+Subsystems:
+- void initialize()
+- void execute()
+- void end()
+- boolean isFinished()
 
 ### How does the code work?
-Write about how it works here
+The code should enable the robot to move.
+
 
 ### Important notes for future reference
-Notes about git, and helpful resources, etc. 
-
-Please put them here, they will really help you in the future 
+There are a couple errors present within the code, such as the public class "RobotContainer", and an error in the configureBindings method.
