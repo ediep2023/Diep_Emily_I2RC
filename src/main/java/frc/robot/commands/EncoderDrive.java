@@ -5,9 +5,9 @@ import frc.robot.subsystems.Drivetrain;
 
 public class EncoderDrive extends Command{
     private Drivetrain dt;
-    private int setpoint;
+    private double setpoint;
 
-    public EncoderDrive(Drivetrain dt, int setpoint){
+    public EncoderDrive(Drivetrain dt, double setpoint);
         this.dt = dt;
         this.setpoint=setpoint;
         addRequirements(dt);
@@ -28,23 +28,10 @@ public class EncoderDrive extends Command{
     }
 
     public boolean isFinished(){
-        if (dt.tankDrive(0, 0)){
+      
+        if (dt.getMeters() >= setpoint) {
             return true;
         }
         return false;
-    }
-}
-
-public class RobotContainer{
-    private final Drivetrain dt = new Drivetrain();
-    private final EncoderDrive drive = new EncoderDrive(dt, 2);
-
-    public RobotContainer(){
-        dt.setDefaultCommand(drive);
-        configureBindings();
-    }
-
-    public Command getAutonomousCommand(){
-        return drive;
     }
 }

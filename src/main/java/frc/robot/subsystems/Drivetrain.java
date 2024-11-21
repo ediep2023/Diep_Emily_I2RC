@@ -12,6 +12,7 @@ import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.SPI;
 
 public class Drivetrain extends SubsystemBase {
@@ -45,6 +46,18 @@ public class Drivetrain extends SubsystemBase {
   }
   public void reset(){
     NavX.reset();
+  }
+
+  public void resetEncoders() {
+    leftDriveTalon.setSelectedSensorPosition(0);
+    rightDriveTalon.setSelectedSensorPosition(0);
+  }
+
+  public double getTicks() {
+    return (leftDriveTalon.getSelectedSensorPosition(0) + rightDriveTalon.getSelectedSensorPosition(0))/ 2;
+  }
+  public double getMeters() {
+    return (getTicks() * Units.inchesToMeters(6)*Math.PI/4096);
   }
   /* 
   private ShuffleboardTab DTTab = Shuffleboard.getTab(title:"DriveTrain");

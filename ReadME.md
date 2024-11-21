@@ -3,26 +3,19 @@ Name: Emily Diep
 
 Section: I2RC
 
-Week: 5
+Week: 6
 
 
 ## Code
 
-The main topic this week was: Encoder Drive
+The main topic this week was: creating the code for my PID lab.
 
-Commands:
-- EncoderDrive, extends from Commander class
-- RobotContainer
+Commands: N/A
 
-Subsystems:
-- void initialize()
-- void execute()
-- void end()
-- boolean isFinished()
+Subsystems: PIDTurnLab (extends from Commands class)
 
 ### How does the code work?
-The code should enable the robot to move.
-
+As of writing this file, I haven't written the initialize, execute, and end methods yet. Despite this, I have set up my drive train object.
 
 ### Important notes for future reference
-There are a couple errors present within the code, such as the public class "RobotContainer", and an error in the configureBindings method.
+This code should have at least one method completed and pushed onto github before Friday's session.
